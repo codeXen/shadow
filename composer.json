@@ -11,8 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "application/",
-            "Shadow\\": "vendor/codexen/shadow-core/src/"
+            "App\\": "application/"
         }
     },
     "require": {
