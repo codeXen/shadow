@@ -1,10 +1,8 @@
 <?php
 /* template head */
-if (class_exists('Dwoo\Plugins\Functions\PluginInclude')===false)
-	$this->getLoader()->loadPlugin('PluginInclude');
 /* end template head */ ob_start(); /* template body */ ;
 '';// checking for modification in file:../application/Views/backend/products/../layouts/app.dwoo.php
-if (!("1519853468" == filemtime('../application/Views/backend/products/../layouts/app.dwoo.php'))) { ob_end_clean(); return false; };?><!DOCTYPE html>
+if (!("1519853171" == filemtime('../application/Views/backend/products/../layouts/app.dwoo.php'))) { ob_end_clean(); return false; };?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,7 +21,7 @@ if (!("1519853468" == filemtime('../application/Views/backend/products/../layout
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo url('');?>">Shadow</a>
+        <a class="navbar-brand" href="#">Navbar</a>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -37,6 +35,10 @@ if (!("1519853468" == filemtime('../application/Views/backend/products/../layout
                     </div>
                 </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
     </nav>
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -46,11 +48,35 @@ if (!("1519853468" == filemtime('../application/Views/backend/products/../layout
 	        <div class="row">
 	        		<div class="col-md-12">
 		<div class="content">
-			<form action="<?php echo url('backend/products/store');?>" method="POST">
-				<?php echo $this->classCall('Dwoo\Plugins\Functions\Plugininclude', 
-                        array('partials/fields.dwoo.php', null, null, null, '_root', null));?>
+			<form action="<?php echo url('backend/products/'.$this->readVarInto(array (  1 =>   array (    0 => '->',  ),  2 =>   array (    0 => 'id',  ),  3 =>   array (    0 => '',    1 => '',  ),), (isset($this->scope["product"]) ? $this->scope["product"]:null), true).'/update');?>" method="post">
+				<input type="hidden" name="_method" value="patch">
+				
+				<div class="row">
+					<div class="col-md-9">
+						<div class="form-group">
+							<label for="">Title</label>
+							<input type="text" name="title" value="<?php echo $this->readVarInto(array (  1 =>   array (    0 => '->',  ),  2 =>   array (    0 => 'title',  ),  3 =>   array (    0 => '',    1 => '',  ),), $this->scope["product"], false);?>" class="form-control" placeholder="Title">
+						</div>	
 
-				<button class="btn btn-default">Submit</button>
+						<div class="form-group">
+							<label for="">Description</label>
+							<textarea name="description" rows="8" class="form-control" placeholder="Description"><?php echo $this->readVarInto(array (  1 =>   array (    0 => '->',  ),  2 =>   array (    0 => 'description',  ),  3 =>   array (    0 => '',    1 => '',  ),), $this->scope["product"], false);?></textarea>
+						</div>
+					</div> <!-- col -->
+					<div class="col-md-3">
+						<div class="form-group">
+							<label for="">Price</label>
+							<input type="number" name="price" value="<?php echo $this->readVarInto(array (  1 =>   array (    0 => '->',  ),  2 =>   array (    0 => 'price',  ),  3 =>   array (    0 => '',    1 => '',  ),), $this->scope["product"], false);?>" class="form-control" placeholder="Price">
+						</div>
+
+						<div class="form-group">
+							<label for="">Image</label>
+							<input type="text" name="image" value="<?php echo $this->readVarInto(array (  1 =>   array (    0 => '->',  ),  2 =>   array (    0 => 'image',  ),  3 =>   array (    0 => '',    1 => '',  ),), $this->scope["product"], false);?>" class="form-control">
+						</div>	
+					</div> <!-- col -->
+				</div> <!-- row -->
+
+				<button class="btn btn-default">Update</button>
 			</form>
 		</div>
 	</div>

@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+/* template head */
+/* end template head */ ob_start(); /* template body */ ;
+'';// checking for modification in file:../application/Views/backend/auth/../layouts/app.dwoo.php
+if (!("1519853468" == filemtime('../application/Views/backend/auth/../layouts/app.dwoo.php'))) { ob_end_clean(); return false; };?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +13,7 @@
     <title>Shadow CRUD Example</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    {block "styles"}{/block}
+    
 </head>
 
 <body>
@@ -17,17 +21,17 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{url('')}">Shadow</a>
+        <a class="navbar-brand" href="<?php echo url('');?>">Shadow</a>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{url('backend/products')}">Products <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo url('backend/products');?>">Products <span class="sr-only">(current)</span></a>
                 </li>
                 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="{url('backend/logout')}">Logout</a>
+                        <a class="dropdown-item" href="<?php echo url('backend/logout');?>">Logout</a>
                     </div>
                 </li>
             </ul>
@@ -38,11 +42,21 @@
         <div class="container">
 	        <!-- Example row of columns -->
 	        <div class="row">
-	        	{block "content"}{/block}
+	        		<div class="center col-md-6">
+		<form action="<?php echo url('backend/login');?>" method="post">
+			<div class="form-group">
+				<input type="text" name="username" placeholder="Username" class="form-control">
+			</div>
+			<div class="form-group">
+				<input type="password" name="password" placeholder="Password" class="form-control">
+			</div>
+			<button class="btn btn-default">Login</button>
+		</form>
+	</div>
 	        </div>
 	        <hr>
 	        <footer>
-	            <p>&copy; Shadow {date('Y')}</p>
+	            <p>&copy; Shadow <?php echo date('Y');?></p>
 	        </footer>
 	    </div>
     </div>
@@ -53,7 +67,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    {block "scripts"}{/block}
+    
    
 </body>
-</html>
+</html><?php  /* end template body */
+return $this->buffer . ob_get_clean();
+?>

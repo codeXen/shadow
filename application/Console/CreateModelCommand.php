@@ -13,7 +13,7 @@ class CreateModelCommand extends Command
   protected function configure()
   {
     $this
-    ->addArgument('modelname', InputArgument::REQUIRED, 'Name Of The Controller to Generate.')
+    ->addArgument('modelname', InputArgument::REQUIRED, 'Name Of The Model to Generate.')
     ->addArgument('option', InputArgument::OPTIONAL, 'Enter withController if you Want to Generate a Controller')
     ->setName('create:model')
     ->setDescription('Creates new Model.')
@@ -25,7 +25,7 @@ class CreateModelCommand extends Command
     // outputs multiple lines to the console (adding "\n" at the end of each line)
     $generator = Genarators::getInstance();
     $output->writeln([
-      "<comment>Executing Command -> app:create-model {$input->getArgument('modelname')}</comment>",
+      "<comment>Executing Command -> create:model {$input->getArgument('modelname')}</comment>",
       '**************************************************',
     ]);
 

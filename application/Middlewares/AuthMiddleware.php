@@ -10,11 +10,11 @@ class AuthMiddleware
 
 	}
 
-	public static function init() {
+    public static function init() {
 		
-		// if(Auth::checkSession()) {
+		if(Auth::checkSession()) {
 			return true;
-		// }
+		}
 		
 		return redirect('backend/login');
 	}
