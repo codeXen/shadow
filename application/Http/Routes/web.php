@@ -22,6 +22,9 @@ $router->get('/', function() {
 
 
 
+
+
+
 //EXAMPLE CRUD /backend/products -->>
 $router->get('/backend/login', 'Backend\AuthController@getLogin');
 $router->post('/backend/login', 'Backend\AuthController@postLogin');

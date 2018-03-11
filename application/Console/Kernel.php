@@ -11,6 +11,7 @@ class Kernel extends Kapitan
 
 		//Register your commands
 		$this->register(new GreetCommand()); //app:greet
+		$this->register(new GenerateAppKeyCommand()); //app:generate-key
 		$this->register(new CreateControllerCommand()); //create:controller
 		$this->register(new CreateModelCommand()); //create:model
 		$this->register(new DatabaseBackupCommand()); //database:backup
