@@ -2,7 +2,7 @@
 
 namespace App\Middlewares;
 
-use Shadow\Authentication\Auth;
+use Exception;
 
 class CorsMiddleware
 {
@@ -10,14 +10,18 @@ class CorsMiddleware
 
 	}
 
-	public static function init() {
-		$token = null;
-		if($checkrequest) { // If its post / patch / put request
-			if(input()->get('_csrfToken') == $token) {
+	public function init() {
+		$token = $_SESSION['_csrfToken'];
+		$_csrfToken = input()->get('_csrfToken');
+
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+			if(!empty($_csrfToken) && $_csrfToken == $token) {
+				// echo "token matched";
 				return true;
 			}
-		}
 
-		throw new Exception('Token missmatch exception');
+			throw new Exception('Token missmatch exception.');
+		}
+		return true;
 	}
 }

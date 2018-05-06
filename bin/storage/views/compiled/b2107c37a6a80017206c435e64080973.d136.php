@@ -51,6 +51,7 @@ if (!("1519853468" == filemtime('../application/Views/backend/products/../layout
                         array('partials/fields.dwoo.php', null, null, null, '_root', null));?>
 
 				<button class="btn btn-default">Submit</button>
+				<input type="hidden" name="_csrfToken" value="<?php echo _csrfToken();?>">
 			</form>
 		</div>
 	</div>

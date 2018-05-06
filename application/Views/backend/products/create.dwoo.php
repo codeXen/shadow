@@ -6,6 +6,7 @@
 			<form action="{url('backend/products/store')}" method="POST">
 				{include 'partials/fields.dwoo.php'}
 				<button class="btn btn-default">Submit</button>
+				<input type="hidden" name="_csrfToken" value="{_csrfToken()}">
 			</form>
 		</div>
 	</div>

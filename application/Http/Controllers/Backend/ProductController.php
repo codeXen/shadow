@@ -15,9 +15,8 @@ class ProductController extends Controller
 	public function index() {
 		$products = Product::instance()->orderBy('id', 'desc')->getAll();
 
-		$debugbar = debugbar();
 		// return $this->view('welcome', compact('debugbar'));
-		return render('backend/products/index', compact('products', 'debugbar'));
+		return render('backend/products/index', compact('products'));
 	}
 
 	public function create() {
@@ -78,7 +77,7 @@ class ProductController extends Controller
 
 
 	private function saveProductsImage() {
-		return "default.png";	
+		return "default.png";
 	}
 
 }

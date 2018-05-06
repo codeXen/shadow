@@ -6,10 +6,12 @@ $router->get('/', function() {
 	return render('welcome');
 });
 
+$router->post('/post-test', function() {
+	echo "posted";
+});
 
-
-
-
+$router->get('/test', 'TestController@index');
+// $router->get('/async', 'TestController@index');
 
 
 

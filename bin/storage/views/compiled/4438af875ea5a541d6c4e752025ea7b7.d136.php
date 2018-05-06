@@ -51,6 +51,8 @@ if (!("1519853468" == filemtime('../application/Views/backend/auth/../layouts/ap
 				<input type="password" name="password" placeholder="Password" class="form-control">
 			</div>
 			<button class="btn btn-default">Login</button>
+
+			<input type="hidden" name="_csrfToken" value="<?php echo _csrfToken();?>">
 		</form>
 	</div>
 	        </div>

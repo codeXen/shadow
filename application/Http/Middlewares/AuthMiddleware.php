@@ -10,8 +10,7 @@ class AuthMiddleware
 
 	}
 
-    public static function init() {
-		
+    public function init() {		
 		if(Auth::checkSession()) {
 			return true;
 		}

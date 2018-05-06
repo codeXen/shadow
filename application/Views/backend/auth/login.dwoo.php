@@ -9,6 +9,8 @@
 				<input type="password" name="password" placeholder="Password" class="form-control">
 			</div>
 			<button class="btn btn-default">Login</button>
+
+			<input type="hidden" name="_csrfToken" value="{_csrfToken()}">
 		</form>
 	</div>
 {/block}

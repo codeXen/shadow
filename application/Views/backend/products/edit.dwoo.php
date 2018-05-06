@@ -32,6 +32,7 @@
 				</div> <!-- row -->
 
 				<button class="btn btn-default">Update</button>
+				<input type="hidden" name="_csrfToken" value="{_csrfToken()}">
 			</form>
 		</div>
 	</div>
