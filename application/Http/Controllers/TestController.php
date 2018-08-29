@@ -8,6 +8,10 @@ use Shadow\Mailer\Mail;
 class TestController extends Controller
 {
 	public function index() {
+		$session = $_SESSION;
+		var_dump($session);
+		exit;
+		
 		$ok = (new Mail())
 			->setFrom('Codexen', 'codexen7@gmail.com')
 			->addTo('Ruju Bajracharya', 'bajra.ruju@gmail.com')
