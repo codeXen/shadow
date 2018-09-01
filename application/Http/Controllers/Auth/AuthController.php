@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Controllers\Backend;
+namespace App\Controllers\Auth;
 
 use App\Controllers\Controller;
 use Shadow\Authentication\Auth;
@@ -12,7 +12,7 @@ class AuthController extends Controller
 	}
 
 	public function getLogin() {
-		return render('backend/auth/login');
+		return render('auth/login');
 	}
 
 	public function postLogin() {
@@ -20,13 +20,13 @@ class AuthController extends Controller
 		$password = input()->get('password');
 
 		Auth::login(['username' => $username, 'password' => $password], function() {
-			return redirect('backend/products');
+			return redirect('/');
 		});
 	}
 
 	public function getLogout() {
 		Auth::logout();
 
-		return redirect('backend/login');
+		return redirect('auth/login');
 	}
 }
