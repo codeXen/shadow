@@ -15,6 +15,7 @@ class Kernel extends Kapitan
 		$this->register(new CreateControllerCommand()); //create:controller
 		$this->register(new CreateModelCommand()); //create:model
 		$this->register(new DatabaseBackupCommand()); //database:backup
+		$this->register(new ServerCommand()); //server
 		$this->run();
 	}
 }
