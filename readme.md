@@ -6,7 +6,7 @@ Shadow is an **awesome PHP framework** providing an easier and expressive way to
 
 - composer create-project codexen/shadow foldername
 - sudo chmod 777 -R bin/storage
-- php -S localhost:8000 -t public
+- php kapitan server
 
 ## Code Examples
 
