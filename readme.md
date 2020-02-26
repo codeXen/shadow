@@ -2,6 +2,9 @@
 
 Shadow is an **awesome PHP framework** providing an easier and expressive way to create websites.
 
+## Documentation
+For detailed documentation visit https://codexen.github.io/shadow-docs/installation.html
+
 ## Installation
 
 - composer create-project codexen/shadow foldername
