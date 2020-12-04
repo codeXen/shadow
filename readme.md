@@ -7,7 +7,7 @@ For detailed documentation visit https://codexen.github.io/shadow-docs/
 
 ## Installation
 
-- composer create-project codexen/shadow foldername
+- composer create-project codexen/shadow foldername dev-master
 - cp remote.ini.example remote.ini
 - php kapitan server
 
