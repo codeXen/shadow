@@ -1,3 +1,4 @@
 /vendor/
 composer.lock
 remote.ini
+/bin/database/backups/
