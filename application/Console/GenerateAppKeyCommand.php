@@ -9,7 +9,7 @@ use Shadow\Console\KapitanNotify;
 
 class GenerateAppKeyCommand extends Command
 {
-	protected $commandName = 'app:generate-key';
+	protected $commandName = 'generate:key';
 	protected $commandDescription = "Generate app key";
 
 	protected function configure()
