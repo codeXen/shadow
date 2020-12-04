@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Shadow\Authentication\Auth;
 
 class AuthController extends Controller
